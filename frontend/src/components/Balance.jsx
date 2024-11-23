@@ -1,11 +1,12 @@
-
 export const Balance = ({ value }) => {
-     return <div className="flex">
-         <div className="font-bold text-lg">
-             Your balance
-         </div>
-         <div className="font-semibold ml-4 text-lg">
-             Rs {value}
-         </div>
-     </div>
- }
+    return (
+        <div className="flex flex-col space-y-2">
+            <div className="text-gray-600 text-lg">
+                Available Balance
+            </div>
+            <div className="text-4xl font-bold text-gray-900">
+                ₹ {value.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
+            </div>
+        </div>
+    )
+}
